@@ -1,0 +1,37 @@
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center">Welcome, <%= admin.name %></h1>
+          <hr>
+          <div class="text-center">
+            <a href="/admin/dashboard" class="btn btn-primary">Dashboard</a>
+          </div>
+          <br>
+          <table class="table">
+            <tr>
+              <td>Email</td>
+              <td><%= admin.email %></td>
+            </tr>
+            <tr>
+              <td>Mobile</td>
+              <td><%= admin.mobile %></td>
+            </tr>
+          </table>
+          <div class="text-center">
+            <a href="/admin/logout" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../layouts/footer.ejs") %>
+
+
+

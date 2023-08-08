@@ -1,0 +1,45 @@
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="mt-5">
+  <div class="card mx-auto" style="max-width: 450px;">
+    <div class="card-body">
+      <h1 class="card-title text-center">Create Account</h1>
+      <% if(typeof rfmessage !== 'undefined'){ %>
+        <p style="color: red;" class="text-center mt-3"><%= rfmessage %></p>
+      <% } %>
+      <form action="" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name" required pattern="[a-zA-Z ]{1,}">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" required <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|COM)$">
+          
+
+        </div>
+        <div class="mb-3">
+          <label for="mno" class="form-label">Mobile</label>
+          <input type="text" name="mno" class="form-control" id="mno" placeholder="Enter Mobile" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password" required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+
+      <% if(typeof message !== 'undefined'){ %>
+        <p style="color: green;" class="text-center mt-3"><%= message %></p>
+      <% } %>
+      <p class="text-center mt-3">Already have an account? <a href="/login">Sign in</a></p>
+    </div>
+  </div>
+</div>
+
+<%- include("../layouts/footer.ejs") %>
+
+

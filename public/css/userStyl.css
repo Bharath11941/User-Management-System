@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+ font-family: 'Open Sans', sans-serif;
+ background-image: url('/images/retrosupply-jLwVAUtLOAQ-unsplash.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+}
+
+.login-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f4f4;
+  max-width: 450px;
+  width: 100%;
+}

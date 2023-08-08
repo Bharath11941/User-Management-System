@@ -1,0 +1,34 @@
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Edit Your Profile</h2>
+          <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+            <input type="hidden" name="user_id" value="<%= user._id %>">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="name" value="<%= user.name %>" class="form-control" placeholder="Enter Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="email" value="<%= user.email %>" class="form-control" placeholder="Enter Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mno" class="form-label">Mobile</label>
+              <input type="text" name="mno" value="<%= user.mobile %>" class="form-control" placeholder="Enter Mobile" required>
+            </div>
+            <div class="text-center">
+              <input type="submit" value="Update Profile" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../layouts/footer.ejs") %>

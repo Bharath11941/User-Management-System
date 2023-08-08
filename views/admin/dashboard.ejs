@@ -1,0 +1,51 @@
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-5">
+  <h1 class="text-center">Dashboard</h1>
+  
+  <div class="text-end">
+    <form action="" method="" class="mb-3">
+      <div class="input-group">
+        <input type="text" name="search" class="form-control" placeholder="Search User by name,email and mobile" />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+    <a href="/admin/newUser" class="btn btn-primary">Add New User</a>
+  </div>
+  <br><br>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (users.length > 0) { %>
+        <% for (let i = 0; i < users.length; i++) { %>
+          <tr>
+            <td><%= users[i].name %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].mobile %></td>
+            <td>
+              <a href="/admin/edit-user?id=<%= users[i]._id %>" class="btn btn-primary">Edit</a>
+              <a href="/admin/delete-user?id=<%= users[i]._id %>" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+        <% } %>
+      <% } else { %>
+        <tr>
+          <td colspan="4" class="text-center">Users Not Found</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <br><br>
+</div>
+
+<%- include("../layouts/footer.ejs") %>
+

@@ -1,0 +1,29 @@
+<%- include("../layouts/header.ejs") %>
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title text-center">Welcome, <%= user.name %></h3>
+          <table class="table">
+            <tr>
+              <td>Email</td>
+              <td><%= user.email %></td>
+            </tr>
+            <tr>
+              <td>Mobile</td>
+              <td><%= user.mobile %></td>
+            </tr>
+          </table>
+          <div class="text-center">
+            <a href="/edit?id=<%= user._id %>" class="btn btn-primary">Edit</a>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../layouts/footer.ejs") %>
